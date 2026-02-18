@@ -52,6 +52,12 @@
     padding: 40px 20px;
   }
 
+  .header-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
 
   /* Clock face */
   .clock-wrap {
@@ -318,7 +324,6 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 18px;
   }
 
   .timer-name {
@@ -362,6 +367,13 @@
     text-align: center;
   }
 
+  .byline {
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    text-transform: lowercase;
+  }
+
   .lap-log::-webkit-scrollbar { width: 4px; }
   .lap-log::-webkit-scrollbar-track { background: transparent; }
   .lap-log::-webkit-scrollbar-thumb { background: var(--ring); border-radius: 2px; }
@@ -369,9 +381,12 @@
 </head>
 <body>
 <div class="container">
-  <div class="timer-name-wrap">
-    <span class="timer-name" id="timerName" title="Click to rename">THE TIMER OF TIMERS</span>
-    <button class="rename-btn" id="renameBtn" title="Rename timer">&#9998;</button>
+  <div class="header-block">
+    <div class="timer-name-wrap">
+      <span class="timer-name" id="timerName" title="Click to rename">THE TIMER OF TIMERS</span>
+      <button class="rename-btn" id="renameBtn" title="Rename timer">&#9998;</button>
+    </div>
+    <span class="byline">by Akiva Fleischmann</span>
   </div>
 
   <div class="clock-wrap">
